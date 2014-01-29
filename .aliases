@@ -25,20 +25,11 @@ alias armspec="open ~/Uni/C1/Lab/C/ARMSpec.pdf"
 alias armbuggy="ls -l ~/Uni/C1/Lab/C/arm/src/assembler/buggy_assembly"
 
 
-# O2
-alias o2="cd /opt/o2/broadway/content"
-alias o2code="o2; cd www/; sub;"
-alias o2view="open http://broadway.local.dev:8080/www/4g/4gdatacalculator"
-
-
 # Projects
 alias dothcode="ctools; cd HeaderMaker; sub"
 alias ctools="c; cd Tools/"
 alias c="cd ~/Programming/C"
 alias cate="cd ~/Documents/Programming/cate-ios"
-# ---- The Safe House
-alias tsh="cd ~/Sites/TheSafeHouse"
-alias tshsite="open http://localhost/~TomBurnell/TheSafeHouse/"
 
 
 # Miscellaneous
@@ -53,6 +44,7 @@ alias mysql="/usr/local/mysql/bin/mysql -v"
 # ---- Help files
 alias help="less ~/.notes"
 alias edithelp="open -e ~/.notes"
+alias tmuxhelp="less ~/.tmux-instrs"
 # ---- Edit profile / aliases
 alias editprofile="vim ~/.zshrc"
 alias editaliases="vim ~/.aliases"
