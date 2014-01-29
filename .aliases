@@ -1,0 +1,58 @@
+# Uni
+# ---- Coursework
+alias coursework="cd ~/Uni/C2/Coursework"
+# ---- Notes
+alias notes="cd ~/Uni/C2/Notes"
+# ---- Lab
+alias pintos="cd ~/Uni/C2/Lab/pintos_25"
+alias javalab="cd ~/Uni/C1/Lab/Java"
+alias haskelllab="cd ~/Uni/C1/Lab/Haskell"
+alias databaseslab="cd ~/Uni/C1/Lab/Databases"
+alias assemblylab="cd ~/Uni/C1/Lab/Assembly"
+alias javageneral="cd ~/Uni/C1/Programming/Java"
+alias haskellgeneral="cd ~/Uni/C1/Programming/Haskell"
+# ---- Lab Specifics
+alias enigmalab="cd ~/Uni/C2/Lab/cenigma_thb12"
+alias wacclab="cd ~/Uni/C2/Lab/wacc_4"
+# ---- SSH
+alias sshdocshell="ssh thb12@shell3.doc.ic.ac.uk"
+alias sshdocswitch="ssh -Y corona42"
+alias sshdoc="ssh -Y thb12@corona42.doc.ic.ac.uk"
+# ---- arm project
+alias arm="cd ~/Uni/C1/Lab/C/arm"
+alias armtest="cd ~/Uni/C1/Lab/C/testsuite"
+alias armspec="open ~/Uni/C1/Lab/C/ARMSpec.pdf"
+alias armbuggy="ls -l ~/Uni/C1/Lab/C/arm/src/assembler/buggy_assembly"
+
+
+# O2
+alias o2="cd /opt/o2/broadway/content"
+alias o2code="o2; cd www/; sub;"
+alias o2view="open http://broadway.local.dev:8080/www/4g/4gdatacalculator"
+
+
+# Projects
+alias dothcode="ctools; cd HeaderMaker; sub"
+alias ctools="c; cd Tools/"
+alias c="cd ~/Programming/C"
+alias cate="cd ~/Documents/Programming/cate-ios"
+# ---- The Safe House
+alias tsh="cd ~/Sites/TheSafeHouse"
+alias tshsite="open http://localhost/~TomBurnell/TheSafeHouse/"
+
+
+# Miscellaneous
+alias reloadprofile=". ~/.zshrc"
+alias ejectsd="diskutil unmount /Volumes/boot"
+alias listpath="echo $PATH | tr ':' '\n'"
+alias sub='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .'
+alias pycharm='open -a "PyCharm CE"'
+# ---- Servers
+alias apache="sudo apachectl start"
+alias mysql="/usr/local/mysql/bin/mysql -v"
+# ---- Help files
+alias help="less ~/.notes"
+alias edithelp="open -e ~/.notes"
+# ---- Edit profile / aliases
+alias editprofile="vim ~/.zshrc"
+alias editaliases="vim ~/.aliases"

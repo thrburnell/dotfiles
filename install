@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Creates symlinks for all files in this directory from the ~ directory
+
+for file in `ls -d .*`; do
+    if [ ! -f ~/$file ]; then
+        echo "* Creating symlink for $file..."
+        ln -s $file ~/$file
+    else
+        echo "* File $file already exists in ~/"
+    fi
+done
+
