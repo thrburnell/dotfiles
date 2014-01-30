@@ -1,0 +1,37 @@
+Reload profile:
+	C-a r
+
+Split pane horizontal
+	C-a %
+
+Split pane vertical
+	C-a "
+
+Switch pane
+	C-a <up>/<down>/...
+	C-a j/k/l/h
+	<Or click>
+
+Resize pane downwards
+	C-a J
+
+Resize pane upwards
+	C-a K
+
+Resize pane left
+	C-a H
+
+Resize pane right
+	C-a L
+
+Close pane
+	C-a x
+
+Open window
+	C-a c
+
+Close window
+	C-a &
+
+Switch to window n
+	C-a n

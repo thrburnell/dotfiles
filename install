@@ -2,12 +2,23 @@
 
 # Creates symlinks for all files in this directory from the ~ directory
 
-for file in `ls -d .*`; do
-    if [ ! -f ~/$file ]; then
-        echo "* Creating symlink for $file..."
-        ln -s $file ~/$file
-    else
-        echo "* File $file already exists in ~/"
-    fi
-done
+#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR=`pwd`
+DIR_REL=${DIR#${HOME}/}
 
+for file in `ls -d .??*`; do
+	if [ "$file" == ".git" ]; then
+		continue
+	
+	# If the file already exists in home directory, rename it
+	if [ -f ~/$file ]; then
+		echo "> $file already exists in ~, trying to rename to $file.old"
+		mv -i ~/$file ~/$file.old
+	fi
+	
+	# Create the symlink
+	if [ ! -f ~/$file ]; then
+		echo "* Creating symlink for $file..."
+		ln -s $DIR_REL/$file ~/$file
+	fi
+done
