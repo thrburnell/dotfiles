@@ -1,6 +1,7 @@
 # Uni
 alias uni="cd ~/Uni/C2"
 alias lab="uni; cd Lab"
+alias catetoken="git rev-parse HEAD >> ~/cate_token.txt"
 # ---- Coursework
 alias coursework="cd ~/Uni/C2/Coursework"
 # ---- Notes
@@ -18,6 +19,7 @@ alias reloadprofile=". ~/.zshrc"
 alias ejectsd="diskutil unmount /Volumes/boot"
 alias listpath="echo $PATH | tr ':' '\n'"
 alias sub='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .'
+alias sed gsed
 # ---- Servers
 alias apache="sudo apachectl start"
 alias mysql="/usr/local/mysql/bin/mysql -v"

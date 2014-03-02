@@ -50,7 +50,12 @@ eval "$(rbenv init -)"
 SCALA_PATH="/usr/local/share/scala/bin"
 GROOVY_HOME="/Users/TomBurnell/.homebrew/Cellar/groovy/2.1.1/libexec"
 export PATH=/usr/local/bin:$SCALA_PATH:$NOCOMMENT_PATH:$GROOVY_HOME:$PATH
+
 # Include pintos utils in path
 export PATH=/usr/local/i386-elf-gcc/bin:/usr/local/pintos-utils:$PATH
+
+# Include gnu-sed on path and manpath
+export MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH
+export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
 
 export EDITOR=vim
