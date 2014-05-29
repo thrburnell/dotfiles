@@ -1,26 +1,25 @@
-#!/bin/bash
+#!/usr/bin/env coffee
+# vi: set filetype=coffee
 
-# Creates symlinks for all files in this directory from the ~ directory
+fs = require 'fs'
 
-#DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-DIR=`pwd`
-DIR_REL=${DIR#${HOME}/}
+filesPath = './files'
 
-for file in `ls -d .??*`; do
-	if [ "$file" == ".git" ]; then
-		continue
-	fi
+fs.readdir filesPath, (err, files) ->
+  if err? then console.log 'ERROR: Couldn\'t locate dotfiles.'; return
 
-	# If the file already exists in home directory, rename it
-	if [ -e ~/$file ]; then
-		echo "> $file already exists in ~, trying to rename to $file.old"
-		mv -i ~/$file ~/$file.old
-	fi
-	
-	# Create the symlink
-	if [ ! -f ~/$file ]; then
-		echo "* Creating symlink for $file..."
-		ln -s $DIR_REL/$file ~/$file
-	fi
+  installed = 0
 
-done
+  for file in files
+    dst = "#{process.env['HOME']}/#{file}"
+    src = "#{fs.realpathSync(filesPath)}/#{file}"
+  
+    try 
+      fs.symlinkSync src, dst
+      console.log "+ Created #{dst} -> #{src}"
+      installed++
+    catch _
+      console.log "- Cannot create symlink from #{dst}"
+
+  console.log "\n$ Successfully installed #{installed}/#{files.length} dotfiles into $HOME."
+

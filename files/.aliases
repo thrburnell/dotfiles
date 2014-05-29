@@ -6,6 +6,9 @@ alias catetoken="git rev-parse HEAD >> ~/cate_token.txt"
 alias coursework="cd ~/Uni/C2/Coursework"
 # ---- Notes
 alias notes="cd ~/Uni/C2/Notes"
+# ---- Catie
+alias catie="cd ~/Projects/classy-cate"
+alias catievm="echo '* Must be on Imperial VPN' && ssh thb12@cvm-g1327131.doc.ic.ac.uk"
 # ---- Pintos
 alias dirpintos="cd ~/Uni/C2/Lab/pintos"
 alias docpintos="cd ~/Uni/C2/Coursework/Pintos"
@@ -18,7 +21,7 @@ alias sshdoc="ssh -Y thb12@corona42.doc.ic.ac.uk"
 alias reloadprofile=". ~/.zshrc"
 alias ejectsd="diskutil unmount /Volumes/boot"
 alias listpath="echo $PATH | tr ':' '\n'"
-alias sub='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl .'
+#alias sub='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl .'
 alias sed gsed
 # ---- Servers
 alias apache="sudo apachectl start"

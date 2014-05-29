@@ -15,12 +15,15 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'andreamichi/wacc-vim'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'vim-scripts/a.vim'
+Bundle 'tomasr/molokai'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'dandorman/vim-colors'
 
 syntax on
 filetype plugin indent on 
 
 set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night
 
 " Indentation and Formatting
 set autoindent
@@ -91,4 +94,6 @@ let s:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
 if isdirectory(s:clang_library_path)
     let g:clang_library_path=s:clang_library_path
     endif
+
+colorscheme molokai
 
