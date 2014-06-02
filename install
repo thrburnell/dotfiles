@@ -6,7 +6,7 @@ fs = require 'fs'
 filesPath = './files'
 
 if process.argv[2] is "help"
-  console.log "Required: install [{force, save-old}]"
+  console.log "Required: install [{override, save-old}]"
   return
 
 # Required command: "install [{force, save-old}]"
