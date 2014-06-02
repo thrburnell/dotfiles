@@ -5,21 +5,39 @@ fs = require 'fs'
 
 filesPath = './files'
 
+if process.argv[2] is "help"
+  console.log "Required: install [{force, save-old}]"
+  return
+
+# Required command: "install [{force, save-old}]"
+override = process.argv[2] is "override"
+saveOld  = process.argv[2] is "save-old"
+
 fs.readdir filesPath, (err, files) ->
   if err? then console.log 'ERROR: Couldn\'t locate dotfiles.'; return
 
-  installed = 0
-
+  installed = overridden = saved = 0
   for file in files
     dst = "#{process.env['HOME']}/#{file}"
     src = "#{fs.realpathSync(filesPath)}/#{file}"
-  
-    try 
+
+    # Handle cases where file already exists in HOME
+    if fs.existsSync dst
+      if override      # Remove old version
+        fs.unlinkSync dst
+        overridden++
+      else if saveOld  # Backup old version
+        fs.renameSync dst, "#{dst}.old_#{new Date().getTime()}" 
+        saved++
+
+    # Create symlink
+    try
       fs.symlinkSync src, dst
       console.log "+ Created #{dst} -> #{src}"
       installed++
-    catch _
+    catch
       console.log "- Cannot create symlink from #{dst}"
 
-  console.log "\n$ Successfully installed #{installed}/#{files.length} dotfiles into $HOME."
-
+  console.log "\n$ Installed #{installed}/#{files.length} dotfiles into $HOME."
+  console.log "- Deleted #{overridden} old files." if override
+  console.log "- Saved #{saved} old files." if saveOld
