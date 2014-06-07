@@ -18,6 +18,7 @@ Bundle 'vim-scripts/a.vim'
 Bundle 'tomasr/molokai'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'dandorman/vim-colors'
+Bundle 'digitaltoad/vim-jade'
 
 syntax on
 filetype plugin indent on 
@@ -77,6 +78,7 @@ set visualbell
 
 " Support the mouse 
 set mouse=a
+set ttymouse=xterm2
 
 " Open NERDTree with Ctrl+f
 map <C-f> :NERDTreeToggle<CR>

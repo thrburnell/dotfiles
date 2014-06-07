@@ -7,8 +7,7 @@ alias coursework="cd ~/Uni/C2/Coursework"
 # ---- Notes
 alias notes="cd ~/Uni/C2/Notes"
 # ---- Catie
-alias catie="cd ~/Projects/classy-cate"
-alias catievm="echo '* Must be on Imperial VPN' && ssh thb12@cvm-g1327131.doc.ic.ac.uk"
+alias catie="cd ~/Projects/catie"
 # ---- Pintos
 alias dirpintos="cd ~/Uni/C2/Lab/pintos"
 alias docpintos="cd ~/Uni/C2/Coursework/Pintos"
