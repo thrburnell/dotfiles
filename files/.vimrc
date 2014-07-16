@@ -4,21 +4,26 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
 " Plugins in use 
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-surround'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'andreamichi/wacc-vim'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'vim-scripts/a.vim'
-Bundle 'tomasr/molokai'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'dandorman/vim-colors'
-Bundle 'digitaltoad/vim-jade'
+Plugin 'gmarik/vundle'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'andreamichi/wacc-vim'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'vim-scripts/a.vim'
+Plugin 'tomasr/molokai'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'dandorman/vim-colors'
+Plugin 'digitaltoad/vim-jade'
+
+call vundle#end()
 
 syntax on
 filetype plugin indent on 
