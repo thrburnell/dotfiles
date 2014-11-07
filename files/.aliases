@@ -1,26 +1,14 @@
 # Uni
-alias uni="cd ~/Uni/C2"
-alias lab="uni; cd Lab"
+alias uni="cd ~/Uni/C3"
 alias catetoken="git rev-parse HEAD >> ~/cate_token.txt"
-# ---- Coursework
-alias coursework="cd ~/Uni/C2/Coursework"
-# ---- Notes
-alias notes="cd ~/Uni/C2/Notes"
-# ---- Catie
-alias catie="cd ~/Projects/catie"
-# ---- Pintos
-alias dirpintos="cd ~/Uni/C2/Lab/pintos"
-alias docpintos="cd ~/Uni/C2/Coursework/Pintos"
+# ---- Projects
+alias c3gp="cd ~/Uni/C3/GroupProject/c3gp"
 # ---- SSH
-alias sshdocshell="ssh thb12@shell3.doc.ic.ac.uk"
-alias sshdocswitch="ssh -Y corona42"
-alias sshdoc="ssh -Y thb12@corona42.doc.ic.ac.uk"
+alias sshdoc="ssh thb12@shell3.doc.ic.ac.uk"
 
 # Miscellaneous
 alias reloadprofile=". ~/.zshrc"
-alias ejectsd="diskutil unmount /Volumes/boot"
 alias listpath="echo $PATH | tr ':' '\n'"
-#alias sub='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl .'
 alias sed gsed
 # ---- Servers
 alias apache="sudo apachectl start"
